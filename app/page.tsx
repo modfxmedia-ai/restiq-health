@@ -1,40 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect } from "react";
 
 function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const [val, setVal] = useState(0);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    let started = false;
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !started) {
-            started = true;
-            const duration = 1600;
-            const start = performance.now();
-            const tick = (now: number) => {
-              const p = Math.min(1, (now - start) / duration);
-              const eased = 1 - Math.pow(1 - p, 3);
-              setVal(Math.round(eased * to));
-              if (p < 1) requestAnimationFrame(tick);
-            };
-            requestAnimationFrame(tick);
-          }
-        });
-      },
-      { threshold: 0.4 }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, [to]);
   return (
-    <span ref={ref}>
-      {val}
+    <span>
+      {to}
       {suffix}
     </span>
   );
