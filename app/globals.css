@@ -625,7 +625,6 @@ a.site-nav__top-item:hover {
     transparent 75%
   );
   opacity: 0.5;
-  animation: whyDots 24s linear infinite;
 }
 
 @keyframes whyDots {
@@ -722,7 +721,8 @@ a.site-nav__top-item:hover {
   background: var(--accent-sky);
   box-shadow: 0 0 8px 1px rgba(70, 180, 255, 0.7);
   opacity: 0;
-  animation: whyParticle var(--d) linear infinite;
+  display: none;
+  animation: none;
   animation-delay: var(--delay);
 }
 
@@ -877,7 +877,6 @@ a.site-nav__top-item:hover {
   background-position: center;
   opacity: 0.32;
   transform: scale(1.05);
-  animation: heroKenBurns 28s ease-in-out infinite alternate;
 }
 
 .home-hero__overlay {
@@ -919,7 +918,6 @@ a.site-nav__top-item:hover {
   width: 520px;
   height: 520px;
   background: radial-gradient(circle, rgba(70, 180, 255, 0.55), transparent 65%);
-  animation: heroFloat 14s ease-in-out infinite;
 }
 
 .home-hero__glow--2 {
@@ -928,7 +926,6 @@ a.site-nav__top-item:hover {
   width: 460px;
   height: 460px;
   background: radial-gradient(circle, rgba(26, 69, 96, 0.85), transparent 65%);
-  animation: heroFloat 18s ease-in-out infinite reverse;
 }
 
 .home-hero__grid {
@@ -3671,8 +3668,9 @@ a.site-nav__top-item:hover {
   border-radius: 50%;
   background: var(--accent);
   opacity: 0;
+  display: none;
   box-shadow: 0 0 10px 1px rgba(70, 180, 255, 0.6);
-  animation: heroRise var(--d) linear infinite;
+  animation: none;
   animation-delay: var(--delay);
 }
 
@@ -5077,11 +5075,12 @@ a.site-nav__top-item:hover {
   box-shadow: 0 0 16px rgba(70, 180, 255, 0.9);
   transform-origin: 7px 7px;
   opacity: 0;
+  display: none;
 }
 
 .ld-own__chart.is-revealed .ld-donut__spark {
-  opacity: 1;
-  animation: ldOrbit 9s linear infinite;
+  opacity: 0;
+  animation: none;
 }
 
 .ld-donut__spark--1 {

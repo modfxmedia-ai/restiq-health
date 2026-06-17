@@ -271,37 +271,6 @@ export default function Home() {
           <span className="home-hero__glow home-hero__glow--1" />
           <span className="home-hero__glow home-hero__glow--2" />
           <span className="home-hero__grid" />
-          <span className="home-hero__scan" />
-          <span className="home-hero__ring home-hero__ring--1" />
-          <span className="home-hero__ring home-hero__ring--2" />
-          <span className="home-hero__particles">
-            {Array.from({ length: 14 }).map((_, i) => (
-              <span
-                key={i}
-                className="home-hero__particle"
-                style={
-                  {
-                    "--x": `${(i * 37) % 100}%`,
-                    "--d": `${9 + (i % 6) * 2.5}s`,
-                    "--delay": `${(i % 7) * -1.6}s`,
-                    "--s": `${3 + (i % 4)}px`,
-                  } as React.CSSProperties
-                }
-              />
-            ))}
-          </span>
-        </div>
-
-        <div className="home-hero__floaters" aria-hidden="true">
-          <span className="home-hero__floater home-hero__floater--1">
-            <img src="/images/hero-section-2.png" alt="" loading="eager" />
-          </span>
-          <span className="home-hero__floater home-hero__floater--2">
-            <img src="/images/hero-section-1.png" alt="" loading="eager" />
-          </span>
-          <span className="home-hero__floater home-hero__floater--3">
-            <img src="/images/hero-section-3.png" alt="" loading="eager" />
-          </span>
         </div>
 
         <div className="home-hero__inner">
@@ -453,6 +422,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Core Capabilities section hidden for now
       <section className="home-section home-section--mid home-caps">
         <div className="home-caps__bg" aria-hidden="true">
           <span className="home-caps__orb home-caps__orb--1" />
@@ -497,6 +467,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      */}
 
       <section className="home-section home-section--light">
         <div className="home-section__inner">
@@ -805,6 +776,8 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Footprint map section hidden for now */}
+      {false && (
       <section className="home-section home-map">
         <div className="home-map__bg" aria-hidden="true">
           <span className="home-map__glow home-map__glow--1" />
@@ -1043,6 +1016,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      )}
     </main>
   );
 }

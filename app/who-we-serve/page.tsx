@@ -179,6 +179,7 @@ export default function WhoWeServePage() {
         </div>
       </section>
 
+      {/* Readiness Case section hidden for now
       <section className="home-section home-section--mid wws-readiness">
         <div className="home-caps__bg" aria-hidden="true">
           <span className="home-caps__orb home-caps__orb--1" />
@@ -223,6 +224,7 @@ export default function WhoWeServePage() {
           </aside>
         </div>
       </section>
+      */}
 
       <section className="cap-cta">
         <div className="cap-cta__inner" data-reveal>

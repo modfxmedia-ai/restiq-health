@@ -9,7 +9,6 @@ const navItems = [
   { label: "Home", href: "/" },
   { label: "Capabilities", href: "/capabilities" },
   { label: "Who We Serve", href: "/who-we-serve" },
-  { label: "Past Performance", href: "/past-performance" },
   { label: "Leadership", href: "/leadership" },
   { label: "Certifications", href: "/certifications" },
   { label: "Contact", href: "/contact" },
@@ -148,10 +147,13 @@ export default function Nav() {
           </nav>
 
           <div className="site-nav__actions">
+            {/* Book Consultation CTA hidden for now */}
+            {false && (
             <Link href="/contact" className="site-nav__cta">
               Book Consultation
               <ArrowIcon />
             </Link>
+            )}
 
             <button
               type="button"
