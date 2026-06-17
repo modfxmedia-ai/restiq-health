@@ -346,16 +346,6 @@ export default function Home() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
-                <circle className="home-spark__dot" r="4" fill="var(--accent-sky)">
-                  <animateMotion
-                    dur="4s"
-                    repeatCount="indefinite"
-                    keyPoints="0;1"
-                    keyTimes="0;1"
-                    calcMode="linear"
-                    path="M0,86 L40,78 L80,84 L120,58 L160,64 L200,40 L240,46 L280,22 L320,30"
-                  />
-                </circle>
               </svg>
             </div>
 
@@ -776,8 +766,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footprint map section hidden for now */}
-      {false && (
       <section className="home-section home-map">
         <div className="home-map__bg" aria-hidden="true">
           <span className="home-map__glow home-map__glow--1" />
@@ -1016,7 +1004,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      )}
     </main>
   );
 }
