@@ -58,7 +58,7 @@ const sections = [
   {
     title: "Center for Sleep and TMJ \u2014 commercial pilot",
     paras: [
-      "The Center for Sleep and TMJ is the affiliated commercial dental sleep medicine practice founded by Dr. Brian G. Briesemeister Jr., DDS. The practice operates in four Virginia locations covering Suffolk, Newport News, the broader Hampton Roads market, and Richmond, with a clinical focus on:",
+      "The Center for Sleep and TMJ is the affiliated commercial dental sleep medicine practice founded by the company\u2019s clinical Member. The practice operates in four Virginia locations covering Suffolk, Newport News, the broader Hampton Roads market, and Richmond, with a clinical focus on:",
     ],
     bullets: [
       "Oral appliance therapy for obstructive sleep apnea",
@@ -112,7 +112,7 @@ const glance = [
     value: "Oral appliance therapy, TMJ care, HSAT coordination",
   },
   { label: "Professional body", value: "AADSM-aligned methodology" },
-  { label: "Founder", value: "Dr. Brian G. Briesemeister Jr., DDS" },
+  { label: "Founder", value: "Affiliated dental sleep medicine clinician" },
   {
     label: "Relationship",
     value:

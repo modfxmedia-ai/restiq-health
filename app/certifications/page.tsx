@@ -18,9 +18,9 @@ const statusCards = [
   },
   {
     label: "SDVOSB",
-    value: "PENDING",
-    note: "SBA VetCert review",
-    state: "pending",
+    value: "ACTIVE",
+    note: "Service-disabled veteran-owned",
+    state: "active",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z" />
@@ -30,9 +30,9 @@ const statusCards = [
   },
   {
     label: "CAGE Code",
-    value: "PENDING",
-    note: "Standard DLA processing",
-    state: "pending",
+    value: "ACTIVE",
+    note: "DLA registered",
+    state: "active",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <rect x="4" y="4" width="16" height="16" rx="2" />
@@ -45,7 +45,7 @@ const statusCards = [
 const registrations = [
   { label: "SAM.gov status", value: "ACTIVE \u00b7 confirmed May 22, 2026" },
   { label: "UEI", value: "H42NZYR19ML6" },
-  { label: "CAGE code", value: "Pending" },
+  { label: "CAGE code", value: "Active" },
   { label: "EIN", value: "42-2075890" },
   { label: "State of formation", value: "Virginia" },
   {
@@ -58,7 +58,7 @@ const socioeconomic = [
   {
     label: "SDVOSB",
     value:
-      "Service-Disabled Veteran-Owned Small Business \u2014 application submitted to SBA VetCert; pending review. 51% veteran-owned and controlled by Brian G. Briesemeister Sr. (U.S. Navy) and Dr. Alton Stocks (Retired Rear Admiral, U.S. Navy).",
+      "Service-Disabled Veteran-Owned Small Business \u2014 veteran-owned and controlled by service-disabled U.S. Navy veterans.",
   },
   {
     label: "Small business",
@@ -66,7 +66,7 @@ const socioeconomic = [
   },
   {
     label: "Veteran-owned",
-    value: "51% veteran-owned (two service-disabled veteran owners)",
+    value: "Veteran-owned (service-disabled veteran owners)",
   },
 ];
 
@@ -136,10 +136,10 @@ export default function CertificationsPage() {
             </span>
           </h1>
           <p className="cap-hero__lede" data-reveal>
-            RestiQ Health, LLC maintains an active SAM.gov registration and has
-            submitted its Service-Disabled Veteran-Owned Small Business
-            application to SBA VetCert. All federal identifiers and NAICS codes
-            are current as of this site&rsquo;s last revision.
+            RestiQ Health, LLC maintains an active SAM.gov registration and an
+            active CAGE code, and is a Service-Disabled Veteran-Owned Small
+            Business. All federal identifiers and NAICS codes are current as of
+            this site&rsquo;s last revision.
           </p>
         </div>
       </section>
@@ -241,7 +241,7 @@ export default function CertificationsPage() {
                 >
                   sam.gov
                 </a>
-                . CAGE assignment will follow standard DLA processing.
+                . CAGE code is active and registered with DLA.
               </p>
             </div>
           </aside>

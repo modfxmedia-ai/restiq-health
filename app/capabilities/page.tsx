@@ -86,10 +86,10 @@ const capabilityAreas = [
 const entityData = [
   { label: "Legal name", value: "RestiQ Health, LLC" },
   { label: "UEI", value: "H42NZYR19ML6" },
-  { label: "CAGE code", value: "Pending" },
+  { label: "CAGE code", value: "Active" },
   { label: "EIN", value: "42-2075890" },
   { label: "SAM.gov", value: "ACTIVE (confirmed May 22, 2026)" },
-  { label: "SDVOSB", value: "Application pending SBA VetCert review" },
+  { label: "SDVOSB", value: "Service-Disabled Veteran-Owned Small Business" },
   { label: "State of formation", value: "Virginia" },
   { label: "Address", value: "Suffolk, VA \u2014 full mailing address available upon request" },
 ];

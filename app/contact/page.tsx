@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const poc = [
-  { label: "Name", value: "Brian G. Briesemeister Sr." },
+  { label: "Name", value: "Available upon request" },
   { label: "Role", value: "Owner / Operational Control" },
   { label: "Email", value: "info@restiqhealth.com", email: true },
   { label: "Phone", value: "Available upon request" },
@@ -17,7 +17,7 @@ const poc = [
 const identifiers = [
   { label: "Legal name", value: "RestiQ Health, LLC" },
   { label: "UEI", value: "H42NZYR19ML6" },
-  { label: "CAGE", value: "Pending" },
+  { label: "CAGE", value: "Active" },
   { label: "Primary NAICS", value: "621210 \u00b7 Offices of Dentists" },
   { label: "SAM", value: "Active (May 22, 2026)" },
 ];

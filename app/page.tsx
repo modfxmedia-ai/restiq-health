@@ -94,7 +94,7 @@ const services = [
   },
   {
     title: "Federal Contracting",
-    body: "SDVOSB-candidate contracting support with full SAM.gov registration and NAICS coverage.",
+    body: "SDVOSB contracting support with full SAM.gov registration and NAICS coverage.",
   },
 ];
 
@@ -156,7 +156,7 @@ const facts = [
 const metrics = [
   { value: 3, suffix: "", label: "Integrated lines of effort" },
   { value: 5, suffix: "", label: "NAICS codes registered" },
-  { value: 51, suffix: "%", label: "Veteran-owned & controlled" },
+  { value: 2, suffix: "", label: "Veteran owners" },
   { value: 3, suffix: "", label: "Federal payer networks aligned" },
 ];
 
@@ -195,21 +195,21 @@ const readinessStats: {
 
 const leaders = [
   {
-    name: "Brian G. Briesemeister Sr.",
+    name: "Veteran Owner",
     role: "OWNER",
-    initials: "BS",
+    initials: "VO",
     bio: "U.S. Navy veteran. Operational control of the company.",
   },
   {
-    name: "Dr. Alton Stocks, MD",
+    name: "Veteran Owner",
     role: "OWNER",
-    initials: "AS",
+    initials: "VO",
     bio: "Retired Rear Admiral, U.S. Navy. Operational control of the company.",
   },
   {
-    name: "Dr. Brian G. Briesemeister Jr., DDS",
+    name: "Clinical Member",
     role: "MEMBER",
-    initials: "BJ",
+    initials: "CM",
     bio: "AADSM clinician; founder of the affiliated commercial dental sleep practice.",
   },
 ];
@@ -256,7 +256,7 @@ export default function Home() {
             </h1>
             <p className="home-lede">
               RestiQ Health is a Service-Disabled Veteran-Owned Small Business
-              candidate built to deliver evidence-based oral appliance therapy,
+              built to deliver evidence-based oral appliance therapy,
               home sleep apnea testing coordination, and the medical billing and
               credentialing infrastructure required to operate inside Tricare,
               the VA Community Care Network, and the Defense Health Agency.
@@ -273,7 +273,7 @@ export default function Home() {
 
             <div className="home-badges">
               <span className="home-badge home-badge--gold">SAM.gov ACTIVE</span>
-              <span className="home-badge">SDVOSB Pending SBA VetCert</span>
+              <span className="home-badge">SDVOSB</span>
               <span className="home-badge">Virginia LLC</span>
             </div>
           </div>
@@ -328,7 +328,7 @@ export default function Home() {
                   <circle className="home-gauge__value" cx="60" cy="60" r="50" />
                 </svg>
                 <div className="home-gauge__center">
-                  <strong>51%</strong>
+                  <strong>SDVOSB</strong>
                   <span>Veteran-owned</span>
                 </div>
               </div>
@@ -640,7 +640,7 @@ export default function Home() {
           <div className="home-grid home-grid--3">
             {leaders.map((leader, i) => (
               <article
-                key={leader.name}
+                key={i}
                 className="home-leader-card"
                 data-reveal
                 style={{ "--delay": `${i * 0.12}s` } as React.CSSProperties}

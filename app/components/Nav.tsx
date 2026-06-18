@@ -112,7 +112,7 @@ export default function Nav() {
                 SAM.gov Active
               </span>
               <span className="site-nav__top-item site-nav__top-item--hide-sm">
-                SDVOSB-Candidate · Veteran-Owned
+                SDVOSB · Veteran-Owned
               </span>
             </div>
           </div>

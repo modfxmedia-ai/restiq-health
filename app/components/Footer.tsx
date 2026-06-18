@@ -25,7 +25,7 @@ const registrations = [
   { label: "UEI", value: "H42NZYR19ML6" },
   { label: "SAM Status", value: "Active" },
   { label: "Primary NAICS", value: "621210" },
-  { label: "Ownership", value: "51% veteran-owned" },
+  { label: "Ownership", value: "Veteran-owned" },
 ];
 
 export default function Footer() {
@@ -68,7 +68,7 @@ export default function Footer() {
             />
           </Link>
           <p className="site-footer__tagline">
-            Service-Disabled Veteran-Owned Small Business candidate delivering
+            Service-Disabled Veteran-Owned Small Business delivering
             dental sleep medicine and federal healthcare contracting
             capabilities.
           </p>
