@@ -86,7 +86,7 @@ const capabilityAreas = [
 const entityData = [
   { label: "Legal name", value: "RestiQ Health, LLC" },
   { label: "UEI", value: "H42NZYR19ML6" },
-  { label: "CAGE code", value: "Active" },
+  { label: "CAGE code", value: "20HH3" },
   { label: "EIN", value: "42-2075890" },
   { label: "SAM.gov", value: "ACTIVE (confirmed May 22, 2026)" },
   { label: "SDVOSB", value: "Service-Disabled Veteran-Owned Small Business" },

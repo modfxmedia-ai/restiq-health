@@ -30,7 +30,7 @@ const statusCards = [
   },
   {
     label: "CAGE Code",
-    value: "ACTIVE",
+    value: "20HH3",
     note: "DLA registered",
     state: "active",
     icon: (
@@ -45,7 +45,7 @@ const statusCards = [
 const registrations = [
   { label: "SAM.gov status", value: "ACTIVE \u00b7 confirmed May 22, 2026" },
   { label: "UEI", value: "H42NZYR19ML6" },
-  { label: "CAGE code", value: "Active" },
+  { label: "CAGE code", value: "20HH3" },
   { label: "EIN", value: "42-2075890" },
   { label: "State of formation", value: "Virginia" },
   {
