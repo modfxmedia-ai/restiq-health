@@ -5826,6 +5826,52 @@ a.site-nav__top-item:hover {
   z-index: 1;
 }
 
+.ct-embed {
+  position: relative;
+  z-index: 1;
+}
+
+.ct-embed__head {
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.ct-embed__title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.01em;
+}
+
+.ct-embed__sub {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 46ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ct-embed__frame {
+  position: relative;
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.ct-embed__iframe {
+  display: block;
+  width: 100%;
+  max-width: 460px;
+  min-height: 720px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 14px;
+  background: transparent;
+}
+
 .ct-form__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

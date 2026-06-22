@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import Script from "next/script";
+import { useEffect } from "react";
 
 const poc = [
   { label: "Name", value: "Available upon request" },
@@ -20,14 +21,6 @@ const identifiers = [
   { label: "CAGE", value: "20HH3" },
   { label: "Primary NAICS", value: "621210 \u00b7 Offices of Dentists" },
   { label: "SAM", value: "Active (May 22, 2026)" },
-];
-
-const topics = [
-  "Federal procurement / contracting",
-  "Subcontractor / teaming opportunity",
-  "Clinical pilot discussion",
-  "Small Business Office engagement",
-  "Other",
 ];
 
 const contactMethods = [
@@ -78,8 +71,6 @@ const contactMethods = [
 ];
 
 export default function ContactPage() {
-  const [sent, setSent] = useState(false);
-
   useEffect(() => {
     const els = Array.from(
       document.querySelectorAll<HTMLElement>("[data-reveal]")
@@ -98,24 +89,6 @@ export default function ContactPage() {
     els.forEach((el) => obs.observe(el));
     return () => obs.disconnect();
   }, []);
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const data = new FormData(form);
-    const name = String(data.get("name") || "");
-    const org = String(data.get("organization") || "");
-    const email = String(data.get("email") || "");
-    const role = String(data.get("role") || "");
-    const topic = String(data.get("topic") || "");
-    const message = String(data.get("message") || "");
-    const subject = encodeURIComponent(`RestiQ inquiry: ${topic}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nOrganization: ${org}\nEmail: ${email}\nRole: ${role}\nTopic: ${topic}\n\n${message}`
-    );
-    window.location.href = `mailto:info@restiqhealth.com?subject=${subject}&body=${body}`;
-    setSent(true);
-  };
 
   return (
     <main className="cap">
@@ -197,103 +170,34 @@ export default function ContactPage() {
 
           <div className="ct-form-wrap" data-reveal>
             <div className="ct-form-glow" aria-hidden="true" />
-            {sent ? (
-              <div className="ct-success">
-                <span className="ct-success__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="34" height="34">
-                    <path
-                      d="M5 12.5l4 4L19 7"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.4"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
-                <h3>Your email client is opening.</h3>
-                <p>
-                  If nothing happened, email us directly at{" "}
-                  <a href="mailto:info@restiqhealth.com" className="cert-link">
-                    info@restiqhealth.com
-                  </a>
-                  .
+            <div className="ct-embed">
+              <div className="ct-embed__head">
+                <h3 className="ct-embed__title">Send us a message</h3>
+                <p className="ct-embed__sub">
+                  Tell us about your procurement, teaming, or pilot inquiry and
+                  we&rsquo;ll respond promptly.
                 </p>
-                <button
-                  type="button"
-                  className="home-btn home-btn--ghost"
-                  onClick={() => setSent(false)}
-                >
-                  Send another message
-                </button>
               </div>
-            ) : (
-              <form className="ct-form" onSubmit={handleSubmit} noValidate>
-                <div className="ct-form__grid">
-                  <div className="ct-row">
-                    <label htmlFor="f-name">Name</label>
-                    <input
-                      id="f-name"
-                      name="name"
-                      type="text"
-                      autoComplete="name"
-                      required
-                    />
-                  </div>
-                  <div className="ct-row">
-                    <label htmlFor="f-org">Organization</label>
-                    <input
-                      id="f-org"
-                      name="organization"
-                      type="text"
-                      autoComplete="organization"
-                    />
-                  </div>
-                </div>
-                <div className="ct-form__grid">
-                  <div className="ct-row">
-                    <label htmlFor="f-email">Email</label>
-                    <input
-                      id="f-email"
-                      name="email"
-                      type="email"
-                      autoComplete="email"
-                      required
-                    />
-                  </div>
-                  <div className="ct-row">
-                    <label htmlFor="f-role">Role / Title</label>
-                    <input id="f-role" name="role" type="text" />
-                  </div>
-                </div>
-                <div className="ct-row">
-                  <label htmlFor="f-topic">Topic</label>
-                  <select id="f-topic" name="topic" defaultValue={topics[0]}>
-                    {topics.map((t) => (
-                      <option key={t}>{t}</option>
-                    ))}
-                  </select>
-                </div>
-                <div className="ct-row">
-                  <label htmlFor="f-msg">Message</label>
-                  <textarea id="f-msg" name="message" rows={5} required />
-                </div>
-                <button
-                  className="home-btn home-btn--primary ct-submit"
-                  type="submit"
-                >
-                  Send message
-                </button>
-                <p className="ct-note">
-                  This form opens your email client addressed to RestiQ Health.
-                  For immediate contact, email{" "}
-                  <a href="mailto:info@restiqhealth.com" className="cert-link">
-                    info@restiqhealth.com
-                  </a>
-                  .
-                </p>
-              </form>
-            )}
+              <div className="ct-embed__frame">
+                <iframe
+                  src="https://api.leadconnectorhq.com/widget/form/3MFhNDq52sLpmfZ8MOd0"
+                  className="ct-embed__iframe"
+                  id="inline-3MFhNDq52sLpmfZ8MOd0"
+                  data-layout="{'id':'INLINE'}"
+                  data-trigger-type="alwaysShow"
+                  data-trigger-value=""
+                  data-activation-type="alwaysActivated"
+                  data-activation-value=""
+                  data-deactivation-type="neverDeactivate"
+                  data-deactivation-value=""
+                  data-form-name="🟢 Website Form Restiq Health"
+                  data-height="669"
+                  data-layout-iframe-id="inline-3MFhNDq52sLpmfZ8MOd0"
+                  data-form-id="3MFhNDq52sLpmfZ8MOd0"
+                  title="Website Form Restiq Health"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -381,6 +285,11 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <Script
+        src="https://link.msgsndr.com/js/form_embed.js"
+        strategy="afterInteractive"
+      />
     </main>
   );
 }
