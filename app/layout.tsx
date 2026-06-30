@@ -1,5 +1,6 @@
 import { Inter, Sora } from "next/font/google";
 import type { Metadata } from "next";
+import Script from "next/script";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import "./globals.css";
@@ -54,6 +55,9 @@ export const metadata: Metadata = {
     ],
     shortcut: "/favicon.ico",
   },
+  verification: {
+    google: "66CdrJ3tffhMZGdJQ7ARPtUEpXzTBbLUkU-4nfybbG8",
+  },
 };
 
 export default function RootLayout({
@@ -67,6 +71,18 @@ export default function RootLayout({
         <Nav />
         {children}
         <Footer />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-1LGSRHC9ZQ"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1LGSRHC9ZQ');
+          `}
+        </Script>
       </body>
     </html>
   );
